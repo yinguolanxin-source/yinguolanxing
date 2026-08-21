@@ -2,11 +2,191 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>下载页面</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>库尔斯克会战 - 下载</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #0d1117;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .card {
+            background-color: #161b22;
+            border-radius: 12px;
+            border: 1px solid #30363d;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+            padding: 32px 40px;
+            max-width: 680px;
+            width: 100%;
+            transition: all 0.2s;
+        }
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #30363d;
+            flex-wrap: wrap;
+        }
+        .card-header h1 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #f0f6fc;
+        }
+        .card-header .badge {
+            background-color: #1f6feb;
+            color: #ffffff;
+            font-size: 12px;
+            padding: 2px 12px;
+            border-radius: 20px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+        .download-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 10px;
+            border-bottom: 1px solid #21262d;
+            border-radius: 6px;
+            transition: background-color 0.15s, margin 0.15s, padding 0.15s;
+            margin: 0 -4px;
+        }
+        .download-item:last-of-type {
+            border-bottom: none;
+        }
+        .download-item:hover {
+            background-color: #1c2128;
+            margin: 0 -8px;
+            padding-left: 14px;
+            padding-right: 14px;
+        }
+        .download-item .info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            flex: 1;
+        }
+        .download-item .info .name {
+            font-size: 15px;
+            font-weight: 500;
+            color: #f0f6fc;
+        }
+        .download-item .info .desc {
+            font-size: 13px;
+            color: #8b949e;
+        }
+        .download-item .download-btn {
+            background-color: #238636;
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            padding: 6px 20px;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            flex-shrink: 0;
+            margin-left: 16px;
+            transition: background-color 0.2s;
+        }
+        .download-item .download-btn:hover {
+            background-color: #2ea043;
+        }
+        .footer-info {
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1px solid #30363d;
+            font-size: 13px;
+            color: #8b949e;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .footer-info .note {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #58a6ff;
+        }
+        .footer-info .note svg {
+            width: 16px;
+            height: 16px;
+            fill: #58a6ff;
+        }
+        .footer-info .count {
+            color: #8b949e;
+        }
+        /* 小屏适配 */
+        @media (max-width: 480px) {
+            .card {
+                padding: 20px 16px;
+            }
+            .download-item {
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+            .download-item .download-btn {
+                margin-left: 0;
+                width: 100%;
+                text-align: center;
+                padding: 8px;
+            }
+            .card-header h1 {
+                font-size: 17px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>点击下载游戏</h1>
-    <p><a href="库尔斯克会战浪尖战场2D版.exe">下载 2D 版</a></p>
-    <p><a href="库尔斯克会战浪尖战场3D版.exe">下载 3D 版</a></p>
+
+<div class="card">
+    <!-- 头部 -->
+    <div class="card-header">
+        <h1>📦 库尔斯克会战 · 下载</h1>
+        <span class="badge">最新版本 v2.0</span>
+    </div>
+
+    <!-- 下载列表 -->
+    <div class="download-item">
+        <div class="info">
+            <span class="name">库尔斯克会战 浪尖战场 2D 版</span>
+            <span class="desc">Windows 64-bit 可执行文件</span>
+        </div>
+        <a href="库尔斯克会战浪尖战场2D版.exe" class="download-btn" download>下载</a>
+    </div>
+
+    <div class="download-item">
+        <div class="info">
+            <span class="name">库尔斯克会战 浪尖战场 3D 版</span>
+            <span class="desc">Windows 64-bit 可执行文件</span>
+        </div>
+        <a href="库尔斯克会战浪尖战场3D版.exe" class="download-btn" download>下载</a>
+    </div>
+
+    <!-- 底部 -->
+    <div class="footer-info">
+        <span class="count">📁 共 2 个下载项</span>
+        <span class="note">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+            文件安全 · 放心下载
+        </span>
+    </div>
+</div>
+
 </body>
 </html>
