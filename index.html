@@ -129,6 +129,29 @@
         .footer-info .count {
             color: #8b949e;
         }
+        /* 仓库按钮容器 - 新增 */
+        .repo-link-container {
+            margin-top: 20px;
+            padding-top: 16px;
+            border-top: 1px solid #30363d;
+            text-align: center;
+        }
+        .repo-link-btn {
+            display: inline-block;
+            background-color: #21262d;
+            color: #f0f6fc;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 8px 24px;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background-color 0.2s, border-color 0.2s;
+        }
+        .repo-link-btn:hover {
+            background-color: #30363d;
+            border-color: #8b949e;
+        }
         /* 小屏适配 */
         @media (max-width: 480px) {
             .card {
@@ -146,6 +169,10 @@
             }
             .card-header h1 {
                 font-size: 17px;
+            }
+            .footer-info {
+                flex-direction: column;
+                align-items: flex-start;
             }
         }
     </style>
@@ -176,7 +203,7 @@
         <a href="库尔斯克会战浪尖战场3D版.exe" class="download-btn" download>下载</a>
     </div>
 
-    <!-- 底部 -->
+    <!-- 底部信息 -->
     <div class="footer-info">
         <span class="count">📁 共 2 个下载项</span>
         <span class="note">
@@ -185,6 +212,13 @@
             </svg>
             文件安全 · 放心下载
         </span>
+    </div>
+
+    <!-- 新增：访问仓库按钮 -->
+    <div class="repo-link-container">
+        <a href="https://github.com/yinguolanxin-source/yinguolanxing" target="_blank" class="repo-link-btn">
+            <span style="margin-right: 6px;">🔗</span> 访问 GitHub 仓库
+        </a>
     </div>
 </div>
 
